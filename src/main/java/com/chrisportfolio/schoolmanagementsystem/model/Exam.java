@@ -2,8 +2,6 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 
 public class Exam {
 
-    //Should look into consolidating schemas for exams(not as many variables).
-
     private Long examID;
     private String subjects;
     private double marks;

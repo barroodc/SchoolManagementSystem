@@ -3,6 +3,7 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 import java.sql.Date;
 
 public class Admissions {
+
     private Long admissionsID;
     private Long applicationNumber;
     private String applicantName;
