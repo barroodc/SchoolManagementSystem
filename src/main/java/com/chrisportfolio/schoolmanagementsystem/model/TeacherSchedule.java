@@ -5,6 +5,7 @@ import java.sql.Time;
 public class TeacherSchedule {
 
     private Long teacherScheduleID;
+    private Long teacherID;
     private String dayOfWeek;
     private Time time;
     private String lunchBreak;
@@ -16,6 +17,14 @@ public class TeacherSchedule {
 
     public void setTeacherScheduleID(Long teacherScheduleID) {
         this.teacherScheduleID = teacherScheduleID;
+    }
+
+    public Long getTeacherID() {
+        return teacherID;
+    }
+
+    public void setTeacherID(Long teacherID) {
+        this.teacherID = teacherID;
     }
 
     public String getDayOfWeek() {

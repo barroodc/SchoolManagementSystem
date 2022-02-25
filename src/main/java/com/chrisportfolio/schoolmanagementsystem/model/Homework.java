@@ -5,6 +5,7 @@ import java.sql.Date;
 public class Homework {
 
     private Long homeworkID;
+    private Long studentID;
     private String subject;
     private Date assignedDate;
     private Date dueDate;
@@ -19,6 +20,14 @@ public class Homework {
 
     public void setHomeworkID(Long homeworkID) {
         this.homeworkID = homeworkID;
+    }
+
+    public Long getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(Long studentID) {
+        this.studentID = studentID;
     }
 
     public String getSubject() {

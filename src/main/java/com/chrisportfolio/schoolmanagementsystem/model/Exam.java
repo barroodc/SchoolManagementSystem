@@ -3,6 +3,7 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 public class Exam {
 
     private Long examID;
+    private Long examTypeID;
     private String subjects;
     private double marks;
     private String grades;
@@ -15,6 +16,14 @@ public class Exam {
 
     public void setExamID(Long examID) {
         this.examID = examID;
+    }
+
+    public Long getExamTypeID() {
+        return examTypeID;
+    }
+
+    public void setExamTypeID(Long examTypeID) {
+        this.examTypeID = examTypeID;
     }
 
     public String getSubjects() {

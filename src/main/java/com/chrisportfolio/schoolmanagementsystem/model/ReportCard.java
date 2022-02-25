@@ -3,6 +3,8 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 public class ReportCard {
 
     private Long reportCardID;
+    private Long studentID;
+    private Long teacherID;
     private String studentName;
     private String gradeLevel;
     private String subject;
@@ -16,6 +18,22 @@ public class ReportCard {
 
     public void setReportCardID(Long reportCardID) {
         this.reportCardID = reportCardID;
+    }
+
+    public Long getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(Long studentID) {
+        this.studentID = studentID;
+    }
+
+    public Long getTeacherID() {
+        return teacherID;
+    }
+
+    public void setTeacherID(Long teacherID) {
+        this.teacherID = teacherID;
     }
 
     public String getStudentName() {

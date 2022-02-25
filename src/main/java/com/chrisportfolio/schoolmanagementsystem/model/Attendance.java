@@ -3,6 +3,7 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 public class Attendance {
 
     private Long attendanceID;
+    private Long studentID;
     private short perfectAttendance;
     private short acceptableAttendance;
     private short unacceptableAttendance;
@@ -17,6 +18,14 @@ public class Attendance {
 
     public void setAttendanceID(Long attendanceID) {
         this.attendanceID = attendanceID;
+    }
+
+    public Long getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(Long studentID) {
+        this.studentID = studentID;
     }
 
     public short getPerfectAttendance() {

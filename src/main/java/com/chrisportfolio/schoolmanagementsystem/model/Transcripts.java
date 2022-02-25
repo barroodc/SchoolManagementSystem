@@ -3,6 +3,7 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 public class Transcripts {
 
     private Long transcriptID;
+    private Long studentID;
     private String className;
     private String yearOrSemester;
     private String finalGrade;
@@ -14,6 +15,14 @@ public class Transcripts {
 
     public void setTranscriptID(Long transcriptID) {
         this.transcriptID = transcriptID;
+    }
+
+    public Long getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(Long studentID) {
+        this.studentID = studentID;
     }
 
     public String getClassName() {

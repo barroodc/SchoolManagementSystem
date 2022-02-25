@@ -3,6 +3,7 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 public class Course {
 
     private Long courseID;
+    private Long gradeLevelID;
     private String name;
     private String description;
 
@@ -12,6 +13,14 @@ public class Course {
 
     public void setCourseID(Long courseID) {
         this.courseID = courseID;
+    }
+
+    public Long getGradeLevelID() {
+        return gradeLevelID;
+    }
+
+    public void setGradeLevelID(Long gradeLevelID) {
+        this.gradeLevelID = gradeLevelID;
     }
 
     public String getName() {

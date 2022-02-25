@@ -5,6 +5,7 @@ import java.sql.Date;
 public class Student {
 
     private Long studentID;
+    private Long parentID;
     private String email;
     private String password;
     private String firstName;
@@ -26,6 +27,14 @@ public class Student {
 
     public void setStudentID(Long studentID) {
         this.studentID = studentID;
+    }
+
+    public Long getParentID() {
+        return parentID;
+    }
+
+    public void setParentID(Long parentID) {
+        this.parentID = parentID;
     }
 
     public String getEmail() {

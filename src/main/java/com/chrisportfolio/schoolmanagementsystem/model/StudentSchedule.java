@@ -5,6 +5,7 @@ import java.sql.Time;
 public class StudentSchedule {
 
     private Long studentScheduleID;
+    private Long studentID;
     private String dayOfWeek;
     private Time time;
     private String location;
@@ -19,6 +20,14 @@ public class StudentSchedule {
 
     public void setStudentScheduleID(Long studentScheduleID) {
         this.studentScheduleID = studentScheduleID;
+    }
+
+    public Long getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(Long studentID) {
+        this.studentID = studentID;
     }
 
     public String getDayOfWeek() {

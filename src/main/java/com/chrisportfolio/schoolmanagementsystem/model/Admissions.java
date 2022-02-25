@@ -5,6 +5,7 @@ import java.sql.Date;
 public class Admissions {
 
     private Long admissionsID;
+    private Long studentID;
     private Long applicationNumber;
     private String applicantName;
     private String incomingYear;
@@ -18,6 +19,14 @@ public class Admissions {
 
     public void setAdmissionsID(Long admissionsID) {
         this.admissionsID = admissionsID;
+    }
+
+    public Long getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(Long studentID) {
+        this.studentID = studentID;
     }
 
     public Long getApplicationNumber() {

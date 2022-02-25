@@ -3,6 +3,7 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 public class TranscriptGPA {
 
     private Long transcriptGPAID;
+    private Long transcriptsID;
     private String totalCreditsEarned;
     private double GPA;
 
@@ -13,6 +14,14 @@ public class TranscriptGPA {
 
     public void setTranscriptGPAID(Long transcriptGPAID) {
         this.transcriptGPAID = transcriptGPAID;
+    }
+
+    public Long getTranscriptsID() {
+        return transcriptsID;
+    }
+
+    public void setTranscriptsID(Long transcriptsID) {
+        this.transcriptsID = transcriptsID;
     }
 
     public String getTotalCreditsEarned() {
