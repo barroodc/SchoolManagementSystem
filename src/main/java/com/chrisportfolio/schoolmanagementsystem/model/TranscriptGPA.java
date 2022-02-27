@@ -4,7 +4,7 @@ public class TranscriptGPA {
 
     private Long transcriptGPAID;
     private Long transcriptsID;
-    private String totalCreditsEarned;
+    private double totalCreditsEarned;
     private double GPA;
 
 
@@ -24,11 +24,11 @@ public class TranscriptGPA {
         this.transcriptsID = transcriptsID;
     }
 
-    public String getTotalCreditsEarned() {
+    public double getTotalCreditsEarned() {
         return totalCreditsEarned;
     }
 
-    public void setTotalCreditsEarned(String totalCreditsEarned) {
+    public void setTotalCreditsEarned(double totalCreditsEarned) {
         this.totalCreditsEarned = totalCreditsEarned;
     }
 

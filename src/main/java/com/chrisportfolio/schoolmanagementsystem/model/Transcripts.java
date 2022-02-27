@@ -2,19 +2,19 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 
 public class Transcripts {
 
-    private Long transcriptID;
+    private Long transcriptsID;
     private Long studentID;
     private String className;
     private String yearOrSemester;
     private String finalGrade;
     private double credits;
 
-    public Long getTranscriptID() {
-        return transcriptID;
+    public Long getTranscriptsID() {
+        return transcriptsID;
     }
 
-    public void setTranscriptID(Long transcriptID) {
-        this.transcriptID = transcriptID;
+    public void setTranscriptsID(Long transcriptsID) {
+        this.transcriptsID = transcriptsID;
     }
 
     public Long getStudentID() {

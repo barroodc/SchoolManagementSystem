@@ -5,6 +5,8 @@ import com.chrisportfolio.schoolmanagementsystem.model.ExamResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -24,8 +26,23 @@ public class ExamResultDao extends AbstractMySQLDao<ExamResult> implements IExam
     private static final String DELETE = "DELETE FROM exam_result WHERE exam_result_id = ?";
 
     @Override
-    public ExamResult findByID(long id) throws SQLException {
-        return null;
+    public ExamResult findByID(long id) {
+        ExamResult examResult = new ExamResult();
+        try (PreparedStatement statement = this.connection.prepareStatement(GET_ONE)) {
+            statement.setLong(1, id);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                examResult.setExamResultID(rs.getLong("exam_result_id"));
+                examResult.setExamID(rs.getLong("exam_id"));
+                examResult.setCourseID(rs.getLong("course_id"));
+                examResult.setStudentID(rs.getLong("student_id"));
+                examResult.setMark(rs.getDouble("mark"));
+                examResult.setGrade(rs.getString("grade"));
+            }
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
+        return examResult;
     }
 
     @Override
@@ -35,16 +52,41 @@ public class ExamResultDao extends AbstractMySQLDao<ExamResult> implements IExam
 
     @Override
     public ExamResult update(ExamResult dto) {
-        return null;
+        ExamResult examResult = null;
+        try (PreparedStatement statement = this.connection.prepareStatement(UPDATE)) {
+            statement.setLong(1, dto.getExamID());
+            statement.setLong(2, dto.getCourseID());
+            statement.setLong(3, dto.getStudentID());
+            statement.setDouble(4, dto.getMark());
+            statement.setString(5, dto.getGrade());
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
+        return examResult;
     }
 
     @Override
     public ExamResult create(ExamResult dto) {
+        try (PreparedStatement statement = this.connection.prepareStatement(INSERT)) {
+            statement.setLong(1, dto.getExamResultID());
+            statement.setLong(2, dto.getExamID());
+            statement.setLong(3, dto.getCourseID());
+            statement.setLong(4, dto.getStudentID());
+            statement.setDouble(5, dto.getMark());
+            statement.setString(6, dto.getGrade());
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
         return null;
     }
 
     @Override
     public void delete(long id) {
-
+        try (PreparedStatement statement = this.connection.prepareStatement(DELETE)) {
+            statement.setLong(1, id);
+            statement.execute();
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
     }
 }

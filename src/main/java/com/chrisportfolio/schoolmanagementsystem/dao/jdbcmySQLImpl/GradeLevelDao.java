@@ -5,6 +5,8 @@ import com.chrisportfolio.schoolmanagementsystem.model.GradeLevel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -22,8 +24,20 @@ public class GradeLevelDao extends AbstractMySQLDao<GradeLevel> implements IGrad
 
 
     @Override
-    public GradeLevel findByID(long id) throws SQLException {
-        return null;
+    public GradeLevel findByID(long id) {
+        GradeLevel gradeLevel = new GradeLevel();
+        try (PreparedStatement statement = this.connection.prepareStatement(GET_ONE)) {
+            statement.setLong(1, id);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                gradeLevel.setGradeLevelID(rs.getLong("grade_level_id"));
+                gradeLevel.setName(rs.getString("name"));
+                gradeLevel.setDescription(rs.getString("description"));
+            }
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
+        return gradeLevel;
     }
 
     @Override
@@ -33,16 +47,35 @@ public class GradeLevelDao extends AbstractMySQLDao<GradeLevel> implements IGrad
 
     @Override
     public GradeLevel update(GradeLevel dto) {
-        return null;
+        GradeLevel gradeLevel = null;
+        try (PreparedStatement statement = this.connection.prepareStatement(UPDATE)) {
+            statement.setString(1, dto.getName());
+            statement.setString(2, dto.getDescription());
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
+        return gradeLevel;
     }
 
     @Override
     public GradeLevel create(GradeLevel dto) {
+        try (PreparedStatement statement = this.connection.prepareStatement(INSERT)) {
+            statement.setLong(1, dto.getGradeLevelID());
+            statement.setString(2, dto.getName());
+            statement.setString(3, dto.getDescription());
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
         return null;
     }
 
     @Override
     public void delete(long id) {
-
+        try (PreparedStatement statement = this.connection.prepareStatement(DELETE)) {
+            statement.setLong(1, id);
+            statement.execute();
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
     }
 }

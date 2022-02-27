@@ -52,16 +52,41 @@ public class ClassroomDao extends AbstractMySQLDao<Classroom> implements IClassr
 
     @Override
     public Classroom update(Classroom dto) {
-        return null;
+        Classroom classroom = null;
+        try (PreparedStatement statement = this.connection.prepareStatement(UPDATE)) {
+            statement.setLong(1, dto.getTeacherID());
+            statement.setLong(2, dto.getGradeLevelID());
+            statement.setLong(3, dto.getTeacherScheduleID());
+            statement.setString(4, dto.getSection());
+            statement.setString(5, dto.getRemarks());
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
+        return classroom;
     }
 
     @Override
     public Classroom create(Classroom dto) {
+        try (PreparedStatement statement = this.connection.prepareStatement(INSERT)) {
+            statement.setLong(1, dto.getClassroomID());
+            statement.setLong(2, dto.getTeacherID());
+            statement.setLong(3, dto.getGradeLevelID());
+            statement.setLong(4, dto.getTeacherScheduleID());
+            statement.setString(5, dto.getSection());
+            statement.setString(6, dto.getRemarks());
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
         return null;
     }
 
     @Override
     public void delete(long id) {
-
+        try (PreparedStatement statement = this.connection.prepareStatement(DELETE)) {
+            statement.setLong(1, id);
+            statement.execute();
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
     }
 }
