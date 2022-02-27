@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ExamResultDao extends AbstractMySQLDao<ExamResult> implements IExamResultDao {
 
-    private static final Logger LOGGER = LogManager.getLogger(ClassroomDao.class);
+    private static final Logger LOGGER = LogManager.getLogger(ExamResultDao.class);
 
     private static final String INSERT = "INSERT INTO exam_result (exam_result_id, exam_id, course_id, " +
             "student_id, mark, grade) VALUES (?, ?, ?, ?, ?, ?)";

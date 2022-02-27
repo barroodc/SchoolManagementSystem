@@ -2,16 +2,16 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 
 public class GradeLevel {
 
-    private Long gradeID;
+    private Long gradeLevelID;
     private String name;
     private String description;
 
-    public Long getGradeID() {
-        return gradeID;
+    public Long getGradeLevelID() {
+        return gradeLevelID;
     }
 
-    public void setGradeID(Long gradeID) {
-        this.gradeID = gradeID;
+    public void setGradeLevelID(Long gradeLevelID) {
+        this.gradeLevelID = gradeLevelID;
     }
 
     public String getName() {

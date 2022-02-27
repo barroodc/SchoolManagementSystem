@@ -2,16 +2,16 @@ package com.chrisportfolio.schoolmanagementsystem.model;
 
 public class ExamType {
 
-    private Long examType;
+    private Long examTypeID;
     private String name;
     private String description;
 
-    public Long getExamType() {
-        return examType;
+    public Long getExamTypeID() {
+        return examTypeID;
     }
 
-    public void setExamType(Long examType) {
-        this.examType = examType;
+    public void setExamTypeID(Long examTypeID) {
+        this.examTypeID = examTypeID;
     }
 
     public String getName() {
