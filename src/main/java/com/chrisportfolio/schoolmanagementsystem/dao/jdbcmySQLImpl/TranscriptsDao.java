@@ -1,7 +1,6 @@
 package com.chrisportfolio.schoolmanagementsystem.dao.jdbcmySQLImpl;
 
 import com.chrisportfolio.schoolmanagementsystem.dao.daointerfaces.ITranscriptsDao;
-import com.chrisportfolio.schoolmanagementsystem.model.TranscriptGPA;
 import com.chrisportfolio.schoolmanagementsystem.model.Transcripts;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
