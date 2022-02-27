@@ -2,7 +2,6 @@ package com.chrisportfolio.schoolmanagementsystem.dao.jdbcmySQLImpl;
 
 import com.chrisportfolio.schoolmanagementsystem.dao.daointerfaces.IAdmissionsDao;
 import com.chrisportfolio.schoolmanagementsystem.model.Admissions;
-import com.mysql.cj.x.protobuf.MysqlxPrepare;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,7 +31,7 @@ public class AdmissionsDao extends AbstractMySQLDao<Admissions> implements IAdmi
     }
 
     @Override
-    public Admissions findByID(long id) throws SQLException {
+    public Admissions findByID(long id) {
         Admissions admissions = new Admissions();
         try (PreparedStatement statement = this.connection.prepareStatement(GET_ONE)) {
             statement.setLong(1, id);

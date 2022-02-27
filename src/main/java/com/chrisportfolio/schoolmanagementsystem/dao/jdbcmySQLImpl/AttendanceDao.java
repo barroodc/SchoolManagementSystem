@@ -5,6 +5,8 @@ import com.chrisportfolio.schoolmanagementsystem.model.Attendance;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -24,8 +26,26 @@ public class AttendanceDao extends AbstractMySQLDao<Attendance> implements IAtte
     private static final String DELETE = "DELETE FROM attendance WHERE attendance_id = ?";
 
     @Override
-    public Attendance findByID(long id) throws SQLException {
-        return null;
+    public Attendance findByID(long id) {
+        Attendance attendance = new Attendance();
+        try (PreparedStatement statement = this.connection.prepareStatement(GET_ONE)) {
+            statement.setLong(1, id);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                attendance.setAttendanceID(rs.getLong("attendance_id"));
+                attendance.setStudentID(rs.getLong("student_id"));
+                attendance.setPerfectAttendance(rs.getShort("perfect_attendance"));
+                attendance.setAcceptableAttendance(rs.getShort("acceptable_attendance"));
+                attendance.setUnacceptableAttendance(rs.getShort("unacceptable_attendance"));
+                attendance.setExcused_absences(rs.getInt("excused_absences"));
+                attendance.setUnexcused_absences(rs.getInt("unexcused_absences"));
+                attendance.setTardy(rs.getInt("tardy"));
+                attendance.setRemark(rs.getString("remark"));
+            }
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
+        return attendance;
     }
 
     @Override
@@ -35,16 +55,47 @@ public class AttendanceDao extends AbstractMySQLDao<Attendance> implements IAtte
 
     @Override
     public Attendance update(Attendance dto) {
-        return null;
+        Attendance attendance = null;
+        try (PreparedStatement statement = this.connection.prepareStatement(UPDATE)) {
+            statement.setLong(1, dto.getStudentID());
+            statement.setShort(2, dto.getPerfectAttendance());
+            statement.setShort(3, dto.getAcceptableAttendance());
+            statement.setShort(4, dto.getUnacceptableAttendance());
+            statement.setInt(5, dto.getExcused_absences());
+            statement.setInt(6, dto.getUnexcused_absences());
+            statement.setInt(7, dto.getTardy());
+            statement.setString(8, dto.getRemark());
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
+        return attendance;
     }
 
     @Override
     public Attendance create(Attendance dto) {
+        try (PreparedStatement statement = this.connection.prepareStatement(INSERT)) {
+            statement.setLong(1, dto.getAttendanceID());
+            statement.setLong(2, dto.getStudentID());
+            statement.setShort(3, dto.getPerfectAttendance());
+            statement.setShort(4, dto.getAcceptableAttendance());
+            statement.setShort(5, dto.getUnacceptableAttendance());
+            statement.setInt(6, dto.getExcused_absences());
+            statement.setInt(7, dto.getUnexcused_absences());
+            statement.setInt(8, dto.getTardy());
+            statement.setString(9, dto.getRemark());
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
         return null;
     }
 
     @Override
     public void delete(long id) {
-
+        try (PreparedStatement statement = this.connection.prepareStatement(DELETE)) {
+            statement.setLong(1, id);
+            statement.execute();
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
     }
 }

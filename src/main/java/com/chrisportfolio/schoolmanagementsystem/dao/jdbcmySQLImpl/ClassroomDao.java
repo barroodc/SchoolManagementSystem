@@ -5,6 +5,8 @@ import com.chrisportfolio.schoolmanagementsystem.model.Classroom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -24,8 +26,23 @@ public class ClassroomDao extends AbstractMySQLDao<Classroom> implements IClassr
     private static final String DELETE = "DELETE FROM classroom WHERE classroom_id = ?";
 
     @Override
-    public Classroom findByID(long id) throws SQLException {
-        return null;
+    public Classroom findByID(long id)  {
+        Classroom classroom = new Classroom();
+        try (PreparedStatement statement = this.connection.prepareStatement(GET_ONE)) {
+            statement.setLong(1, id);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                classroom.setClassroomID(rs.getLong("classroom_id"));
+                classroom.setTeacherID(rs.getLong("teacher_id"));
+                classroom.setGradeLevelID(rs.getLong("grade_level_id"));
+                classroom.setTeacherScheduleID(rs.getLong("teacher_schedule_id"));
+                classroom.setSection(rs.getString("section"));
+                classroom.setRemarks(rs.getString("remarks"));
+            }
+        } catch (SQLException e) {
+            LOGGER.error(e);
+        }
+        return classroom;
     }
 
     @Override
