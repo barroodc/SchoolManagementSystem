@@ -19,6 +19,7 @@ public class Admissions {
     private Date lastModified;
     private String inquiries;
 
+    @XmlAttribute
     public Long getAdmissionsID() {
         return admissionsID;
     }
@@ -27,6 +28,7 @@ public class Admissions {
         this.admissionsID = admissionsID;
     }
 
+    @XmlAttribute
     public Long getStudentID() {
         return studentID;
     }
@@ -35,6 +37,7 @@ public class Admissions {
         this.studentID = studentID;
     }
 
+    @XmlElement(name = "applicationNumber")
     public Long getApplicationNumber() {
         return applicationNumber;
     }
@@ -43,6 +46,7 @@ public class Admissions {
         this.applicationNumber = applicationNumber;
     }
 
+    @XmlElement(name = "applicantName")
     public String getApplicantName() {
         return applicantName;
     }
@@ -51,6 +55,7 @@ public class Admissions {
         this.applicantName = applicantName;
     }
 
+    @XmlElement(name = "incomingYear")
     public String getIncomingYear() {
         return incomingYear;
     }
@@ -59,6 +64,7 @@ public class Admissions {
         this.incomingYear = incomingYear;
     }
 
+    @XmlElement(name = "status")
     public String getStatus() {
         return status;
     }
@@ -67,6 +73,7 @@ public class Admissions {
         this.status = status;
     }
 
+    @XmlElement(name = "lastModified")
     public Date getLastModified() {
         return lastModified;
     }
@@ -75,6 +82,7 @@ public class Admissions {
         this.lastModified = lastModified;
     }
 
+    @XmlElement(name = "inquiries")
     public String getInquiries() {
         return inquiries;
     }

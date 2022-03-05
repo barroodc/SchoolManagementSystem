@@ -1,9 +1,6 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "Attendance")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -22,6 +19,7 @@ public class Attendance {
     private int tardy;
     private String remark;
 
+    @XmlAttribute
     public Long getAttendanceID() {
         return attendanceID;
     }
@@ -30,6 +28,7 @@ public class Attendance {
         this.attendanceID = attendanceID;
     }
 
+    @XmlAttribute
     public Long getStudentID() {
         return studentID;
     }
@@ -38,6 +37,7 @@ public class Attendance {
         this.studentID = studentID;
     }
 
+    @XmlElement(name = "perfectAttendance")
     public short getPerfectAttendance() {
         return perfectAttendance;
     }
@@ -46,6 +46,7 @@ public class Attendance {
         this.perfectAttendance = perfectAttendance;
     }
 
+    @XmlElement(name = "acceptableAttendance")
     public short getAcceptableAttendance() {
         return acceptableAttendance;
     }
@@ -54,6 +55,7 @@ public class Attendance {
         this.acceptableAttendance = acceptableAttendance;
     }
 
+    @XmlElement(name = "unacceptableAttendance")
     public short getUnacceptableAttendance() {
         return unacceptableAttendance;
     }
@@ -62,6 +64,7 @@ public class Attendance {
         this.unacceptableAttendance = unacceptableAttendance;
     }
 
+    @XmlElement(name = "excusedAbsences")
     public int getExcusedAbsences() {
         return excusedAbsences;
     }
@@ -70,6 +73,7 @@ public class Attendance {
         this.excusedAbsences = excusedAbsences;
     }
 
+    @XmlElement(name = "unexcusedAbsences")
     public int getUnexcusedAbsences() {
         return unexcusedAbsences;
     }
@@ -78,6 +82,7 @@ public class Attendance {
         this.unexcusedAbsences = unexcusedAbsences;
     }
 
+    @XmlElement(name = "tardy")
     public int getTardy() {
         return tardy;
     }
@@ -86,6 +91,7 @@ public class Attendance {
         this.tardy = tardy;
     }
 
+    @XmlElement(name = "remark")
     public String getRemark() {
         return remark;
     }

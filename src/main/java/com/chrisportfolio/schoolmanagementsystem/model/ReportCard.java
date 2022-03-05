@@ -1,7 +1,5 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
-import com.sun.xml.txw2.annotation.XmlElement;
-
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "ReportCard")
@@ -21,6 +19,7 @@ public class ReportCard {
     private String finalExam;
     private String finalGrade;
 
+    @XmlAttribute
     public Long getReportCardID() {
         return reportCardID;
     }
@@ -29,6 +28,7 @@ public class ReportCard {
         this.reportCardID = reportCardID;
     }
 
+    @XmlAttribute
     public Long getStudentID() {
         return studentID;
     }
@@ -37,6 +37,7 @@ public class ReportCard {
         this.studentID = studentID;
     }
 
+    @XmlAttribute
     public Long getTeacherID() {
         return teacherID;
     }
@@ -45,6 +46,7 @@ public class ReportCard {
         this.teacherID = teacherID;
     }
 
+    @XmlElement(name = "studentName")
     public String getStudentName() {
         return studentName;
     }
@@ -53,6 +55,7 @@ public class ReportCard {
         this.studentName = studentName;
     }
 
+    @XmlElement(name = "gradeLevel")
     public String getGradeLevel() {
         return gradeLevel;
     }
@@ -61,6 +64,7 @@ public class ReportCard {
         this.gradeLevel = gradeLevel;
     }
 
+    @XmlElement(name = "subject")
     public String getSubject() {
         return subject;
     }
@@ -69,6 +73,7 @@ public class ReportCard {
         this.subject = subject;
     }
 
+    @XmlElement(name = "midterm")
     public String getMidterm() {
         return midterm;
     }
@@ -77,6 +82,7 @@ public class ReportCard {
         this.midterm = midterm;
     }
 
+    @XmlElement(name = "finalExam")
     public String getFinalExam() {
         return finalExam;
     }
@@ -85,6 +91,7 @@ public class ReportCard {
         this.finalExam = finalExam;
     }
 
+    @XmlElement(name = "finalGrade")
     public String getFinalGrade() {
         return finalGrade;
     }

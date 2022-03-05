@@ -1,9 +1,6 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.sql.Date;
 
 @XmlRootElement(name = "Parent")
@@ -23,6 +20,7 @@ public class Parent {
     private Date lastLoginDate;
     private String lastLoginIP;
 
+    @XmlAttribute
     public Long getParentID() {
         return parentID;
     }
@@ -31,6 +29,7 @@ public class Parent {
         this.parentID = parentID;
     }
 
+    @XmlElement(name = "email")
     public String getEmail() {
         return email;
     }
@@ -39,6 +38,7 @@ public class Parent {
         this.email = email;
     }
 
+    @XmlElement(name = "password")
     public String getPassword() {
         return password;
     }
@@ -47,6 +47,7 @@ public class Parent {
         this.password = password;
     }
 
+    @XmlElement(name = "firstName")
     public String getFirstName() {
         return firstName;
     }
@@ -55,6 +56,7 @@ public class Parent {
         this.firstName = firstName;
     }
 
+    @XmlElement(name = "lastName")
     public String getLastName() {
         return lastName;
     }
@@ -63,6 +65,7 @@ public class Parent {
         this.lastName = lastName;
     }
 
+    @XmlElement(name = "dob")
     public Date getDob() {
         return dob;
     }
@@ -71,6 +74,7 @@ public class Parent {
         this.dob = dob;
     }
 
+    @XmlElement(name = "homePhone")
     public String getHomePhone() {
         return homePhone;
     }
@@ -79,6 +83,7 @@ public class Parent {
         this.homePhone = homePhone;
     }
 
+    @XmlElement(name = "mobile")
     public String getMobile() {
         return mobile;
     }
@@ -87,6 +92,7 @@ public class Parent {
         this.mobile = mobile;
     }
 
+    @XmlElement(name = "lastLoginDate")
     public Date getLastLoginDate() {
         return lastLoginDate;
     }
@@ -95,6 +101,7 @@ public class Parent {
         this.lastLoginDate = lastLoginDate;
     }
 
+    @XmlElement(name = "lastLoginIP")
     public String getLastLoginIP() {
         return lastLoginIP;
     }

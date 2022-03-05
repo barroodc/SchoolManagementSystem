@@ -1,9 +1,6 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.sql.Time;
 
 @XmlRootElement(name = "TeacherSchedule")
@@ -19,6 +16,7 @@ public class TeacherSchedule {
     private String lunchBreak;
     private String courseTaught;
 
+    @XmlAttribute
     public Long getTeacherScheduleID() {
         return teacherScheduleID;
     }
@@ -27,6 +25,7 @@ public class TeacherSchedule {
         this.teacherScheduleID = teacherScheduleID;
     }
 
+    @XmlAttribute
     public Long getTeacherID() {
         return teacherID;
     }
@@ -35,6 +34,7 @@ public class TeacherSchedule {
         this.teacherID = teacherID;
     }
 
+    @XmlElement(name = "dayOfWeek")
     public String getDayOfWeek() {
         return dayOfWeek;
     }
@@ -43,6 +43,7 @@ public class TeacherSchedule {
         this.dayOfWeek = dayOfWeek;
     }
 
+    @XmlElement(name = "time")
     public Time getTime() {
         return time;
     }
@@ -51,6 +52,7 @@ public class TeacherSchedule {
         this.time = time;
     }
 
+    @XmlElement(name = "lunchBreak")
     public String getLunchBreak() {
         return lunchBreak;
     }
@@ -59,6 +61,7 @@ public class TeacherSchedule {
         this.lunchBreak = lunchBreak;
     }
 
+    @XmlElement(name = "courseTaught")
     public String getCourseTaught() {
         return courseTaught;
     }

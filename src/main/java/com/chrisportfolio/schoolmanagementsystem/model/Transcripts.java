@@ -1,9 +1,6 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "Transcripts")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -18,6 +15,7 @@ public class Transcripts {
     private String finalGrade;
     private double credits;
 
+    @XmlAttribute
     public Long getTranscriptsID() {
         return transcriptsID;
     }
@@ -26,6 +24,7 @@ public class Transcripts {
         this.transcriptsID = transcriptsID;
     }
 
+    @XmlAttribute
     public Long getStudentID() {
         return studentID;
     }
@@ -34,6 +33,7 @@ public class Transcripts {
         this.studentID = studentID;
     }
 
+    @XmlElement(name = "className")
     public String getClassName() {
         return className;
     }
@@ -42,6 +42,7 @@ public class Transcripts {
         this.className = className;
     }
 
+    @XmlElement(name = "yearOrSemester")
     public String getYearOrSemester() {
         return yearOrSemester;
     }
@@ -50,6 +51,7 @@ public class Transcripts {
         this.yearOrSemester = yearOrSemester;
     }
 
+    @XmlElement(name = "finalGrade")
     public String getFinalGrade() {
         return finalGrade;
     }
@@ -58,6 +60,7 @@ public class Transcripts {
         this.finalGrade = finalGrade;
     }
 
+    @XmlElement(name = "credits")
     public double getCredits() {
         return credits;
     }

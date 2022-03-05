@@ -1,9 +1,6 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "GradeLevel")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -14,6 +11,7 @@ public class GradeLevel {
     private String name;
     private String description;
 
+    @XmlAttribute
     public Long getGradeLevelID() {
         return gradeLevelID;
     }
@@ -22,6 +20,7 @@ public class GradeLevel {
         this.gradeLevelID = gradeLevelID;
     }
 
+    @XmlElement(name = "name")
     public String getName() {
         return name;
     }
@@ -30,6 +29,7 @@ public class GradeLevel {
         this.name = name;
     }
 
+    @XmlElement(name = "description")
     public String getDescription() {
         return description;
     }

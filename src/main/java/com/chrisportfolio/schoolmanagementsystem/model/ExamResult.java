@@ -15,6 +15,7 @@ public class ExamResult {
     private double mark;
     private String grade;
 
+    @XmlAttribute
     public Long getExamResultID() {
         return examResultID;
     }
@@ -23,6 +24,7 @@ public class ExamResult {
         this.examResultID = examResultID;
     }
 
+    @XmlAttribute
     public Long getExamID() {
         return examID;
     }
@@ -31,6 +33,7 @@ public class ExamResult {
         this.examID = examID;
     }
 
+    @XmlAttribute
     public Long getCourseID() {
         return courseID;
     }
@@ -39,6 +42,7 @@ public class ExamResult {
         this.courseID = courseID;
     }
 
+    @XmlAttribute
     public Long getStudentID() {
         return studentID;
     }
@@ -47,6 +51,7 @@ public class ExamResult {
         this.studentID = studentID;
     }
 
+    @XmlElement(name = "mark")
     public double getMark() {
         return mark;
     }
@@ -55,6 +60,7 @@ public class ExamResult {
         this.mark = mark;
     }
 
+    @XmlElement(name = "grade")
     public String getGrade() {
         return grade;
     }

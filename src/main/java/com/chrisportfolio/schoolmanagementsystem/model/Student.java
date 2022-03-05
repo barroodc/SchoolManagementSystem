@@ -1,9 +1,6 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.sql.Date;
 
 @XmlRootElement(name = "Student")
@@ -30,6 +27,7 @@ public class Student {
     private Date lastLoginDate;
     private String lastLoginIP;
 
+    @XmlAttribute
     public Long getStudentID() {
         return studentID;
     }
@@ -38,6 +36,7 @@ public class Student {
         this.studentID = studentID;
     }
 
+    @XmlAttribute
     public Long getParentID() {
         return parentID;
     }
@@ -46,6 +45,7 @@ public class Student {
         this.parentID = parentID;
     }
 
+    @XmlElement(name = "email")
     public String getEmail() {
         return email;
     }
@@ -54,6 +54,7 @@ public class Student {
         this.email = email;
     }
 
+    @XmlElement(name = "password")
     public String getPassword() {
         return password;
     }
@@ -62,6 +63,7 @@ public class Student {
         this.password = password;
     }
 
+    @XmlElement(name = "fistName")
     public String getFirstName() {
         return firstName;
     }
@@ -70,6 +72,7 @@ public class Student {
         this.firstName = firstName;
     }
 
+    @XmlElement(name = "lastName")
     public String getLastName() {
         return lastName;
     }
@@ -78,6 +81,7 @@ public class Student {
         this.lastName = lastName;
     }
 
+    @XmlElement(name = "dob")
     public Date getDob() {
         return dob;
     }
@@ -86,6 +90,7 @@ public class Student {
         this.dob = dob;
     }
 
+    @XmlElement(name = "homePhone")
     public String getHomePhone() {
         return homePhone;
     }
@@ -94,6 +99,7 @@ public class Student {
         this.homePhone = homePhone;
     }
 
+    @XmlElement(name = "mobile")
     public String getMobile() {
         return mobile;
     }
@@ -102,6 +108,7 @@ public class Student {
         this.mobile = mobile;
     }
 
+    @XmlElement(name = "firstDayOnCampus")
     public Date getFirstDayOnCampus() {
         return firstDayOnCampus;
     }
@@ -110,6 +117,7 @@ public class Student {
         this.firstDayOnCampus = firstDayOnCampus;
     }
 
+    @XmlElement(name = "gradeLevel")
     public String getGradeLevel() {
         return gradeLevel;
     }
@@ -118,6 +126,7 @@ public class Student {
         this.gradeLevel = gradeLevel;
     }
 
+    @XmlElement(name = "gpa")
     public double getGpa() {
         return gpa;
     }
@@ -126,6 +135,7 @@ public class Student {
         this.gpa = gpa;
     }
 
+    @XmlElement(name = "satScore")
     public int getSatScore() {
         return satScore;
     }
@@ -134,6 +144,7 @@ public class Student {
         this.satScore = satScore;
     }
 
+    @XmlElement(name = "actScore")
     public int getActScore() {
         return actScore;
     }
@@ -142,6 +153,7 @@ public class Student {
         this.actScore = actScore;
     }
 
+    @XmlElement(name = "lastLoginDate")
     public Date getLastLoginDate() {
         return lastLoginDate;
     }
@@ -150,6 +162,7 @@ public class Student {
         this.lastLoginDate = lastLoginDate;
     }
 
+    @XmlElement(name = "lastLoginIP")
     public String getLastLoginIP() {
         return lastLoginIP;
     }

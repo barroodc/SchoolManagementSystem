@@ -1,9 +1,6 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.sql.Date;
 
 @XmlRootElement(name = "Teacher")
@@ -25,6 +22,7 @@ public class Teacher {
     private Date lastLoginDate;
     private String lastLoginIP;
 
+    @XmlAttribute
     public Long getTeacherID() {
         return teacherID;
     }
@@ -33,6 +31,7 @@ public class Teacher {
         this.teacherID = teacherID;
     }
 
+    @XmlElement(name = "email")
     public String getEmail() {
         return email;
     }
@@ -41,6 +40,7 @@ public class Teacher {
         this.email = email;
     }
 
+    @XmlElement(name = "password")
     public String getPassword() {
         return password;
     }
@@ -49,6 +49,7 @@ public class Teacher {
         this.password = password;
     }
 
+    @XmlElement(name = "firstName")
     public String getFirstName() {
         return firstName;
     }
@@ -57,6 +58,7 @@ public class Teacher {
         this.firstName = firstName;
     }
 
+    @XmlElement(name = "lastName")
     public String getLastName() {
         return lastName;
     }
@@ -65,6 +67,7 @@ public class Teacher {
         this.lastName = lastName;
     }
 
+    @XmlElement(name = "dob")
     public Date getDob() {
         return dob;
     }
@@ -73,6 +76,7 @@ public class Teacher {
         this.dob = dob;
     }
 
+    @XmlElement(name = "subject")
     public String getSubject() {
         return subject;
     }
@@ -81,6 +85,7 @@ public class Teacher {
         this.subject = subject;
     }
 
+    @XmlElement(name = "homePhone")
     public String getHomePhone() {
         return homePhone;
     }
@@ -89,6 +94,7 @@ public class Teacher {
         this.homePhone = homePhone;
     }
 
+    @XmlElement(name = "mobile")
     public String getMobile() {
         return mobile;
     }
@@ -97,6 +103,7 @@ public class Teacher {
         this.mobile = mobile;
     }
 
+    @XmlElement(name = "tenured")
     public short getTenured() {
         return tenured;
     }
@@ -105,6 +112,7 @@ public class Teacher {
         this.tenured = tenured;
     }
 
+    @XmlElement(name = "lastLoginDate")
     public Date getLastLoginDate() {
         return lastLoginDate;
     }
@@ -113,6 +121,7 @@ public class Teacher {
         this.lastLoginDate = lastLoginDate;
     }
 
+    @XmlElement(name = "lastLoginIP")
     public String getLastLoginIP() {
         return lastLoginIP;
     }

@@ -1,9 +1,6 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.sql.Date;
 
 @XmlRootElement(name = "Homework")
@@ -22,6 +19,7 @@ public class Homework {
     private String teacherName;
     private String description;
 
+    @XmlAttribute
     public Long getHomeworkID() {
         return homeworkID;
     }
@@ -30,6 +28,7 @@ public class Homework {
         this.homeworkID = homeworkID;
     }
 
+    @XmlAttribute
     public Long getStudentID() {
         return studentID;
     }
@@ -38,6 +37,7 @@ public class Homework {
         this.studentID = studentID;
     }
 
+    @XmlElement(name = "subject")
     public String getSubject() {
         return subject;
     }
@@ -46,6 +46,7 @@ public class Homework {
         this.subject = subject;
     }
 
+    @XmlElement(name = "assignedDate")
     public Date getAssignedDate() {
         return assignedDate;
     }
@@ -54,6 +55,7 @@ public class Homework {
         this.assignedDate = assignedDate;
     }
 
+    @XmlElement(name = "dueDate")
     public Date getDueDate() {
         return dueDate;
     }
@@ -62,6 +64,7 @@ public class Homework {
         this.dueDate = dueDate;
     }
 
+    @XmlElement(name = "mark")
     public double getMark() {
         return mark;
     }
@@ -70,6 +73,7 @@ public class Homework {
         this.mark = mark;
     }
 
+    @XmlElement(name = "grade")
     public String getGrade() {
         return grade;
     }
@@ -78,6 +82,7 @@ public class Homework {
         this.grade = grade;
     }
 
+    @XmlElement(name = "teacherName")
     public String getTeacherName() {
         return teacherName;
     }
@@ -86,6 +91,7 @@ public class Homework {
         this.teacherName = teacherName;
     }
 
+    @XmlElement(name = "description")
     public String getDescription() {
         return description;
     }

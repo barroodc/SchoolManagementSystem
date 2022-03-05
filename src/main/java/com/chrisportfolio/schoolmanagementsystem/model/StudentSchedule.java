@@ -1,9 +1,6 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.sql.Time;
 
 @XmlRootElement(name = "StudentSchedule")
@@ -23,6 +20,7 @@ public class StudentSchedule {
     private String courseName;
     private Double totalNumberOfCredits;
 
+    @XmlAttribute
     public Long getStudentScheduleID() {
         return studentScheduleID;
     }
@@ -31,6 +29,7 @@ public class StudentSchedule {
         this.studentScheduleID = studentScheduleID;
     }
 
+    @XmlAttribute
     public Long getStudentID() {
         return studentID;
     }
@@ -39,6 +38,7 @@ public class StudentSchedule {
         this.studentID = studentID;
     }
 
+    @XmlElement(name = "dayOfWeek")
     public String getDayOfWeek() {
         return dayOfWeek;
     }
@@ -47,6 +47,7 @@ public class StudentSchedule {
         this.dayOfWeek = dayOfWeek;
     }
 
+    @XmlElement(name = "time")
     public Time getTime() {
         return time;
     }
@@ -55,6 +56,7 @@ public class StudentSchedule {
         this.time = time;
     }
 
+    @XmlElement(name = "location")
     public String getLocation() {
         return location;
     }
@@ -63,6 +65,7 @@ public class StudentSchedule {
         this.location = location;
     }
 
+    @XmlElement(name = "lunchBreak")
     public String getLunchBreak() {
         return lunchBreak;
     }
@@ -71,6 +74,7 @@ public class StudentSchedule {
         this.lunchBreak = lunchBreak;
     }
 
+    @XmlElement(name = "classRoom")
     public String getClassRoom() {
         return classRoom;
     }
@@ -79,6 +83,7 @@ public class StudentSchedule {
         this.classRoom = classRoom;
     }
 
+    @XmlElement(name = "courseName")
     public String getCourseName() {
         return courseName;
     }
@@ -87,6 +92,7 @@ public class StudentSchedule {
         this.courseName = courseName;
     }
 
+    @XmlElement(name = "totalNumberOfCredits")
     public Double getTotalNumberOfCredits() {
         return totalNumberOfCredits;
     }
