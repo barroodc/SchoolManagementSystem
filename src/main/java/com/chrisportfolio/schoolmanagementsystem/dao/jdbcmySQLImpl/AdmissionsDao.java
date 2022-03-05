@@ -30,6 +30,10 @@ public class AdmissionsDao extends AbstractMySQLDao<Admissions> implements IAdmi
         super(connection);
     }
 
+    public AdmissionsDao() {
+
+    }
+
     @Override
     public Admissions findByID(long id) {
         Admissions admissions = new Admissions();
@@ -99,5 +103,9 @@ public class AdmissionsDao extends AbstractMySQLDao<Admissions> implements IAdmi
         } catch (SQLException e) {
             LOGGER.error(e);
         }
+    }
+
+    public static void main(String[] args) {
+
     }
 }
