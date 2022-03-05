@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Exam>
+    <exam>
+        <examid></examid>
+        <examtypeid></examtypeid>
+        <subjects></subjects>
+        <marks></marks>
+        <grades></grades>
+        <term></term>
+        <class></class>
+    </exam>
+</Exam>

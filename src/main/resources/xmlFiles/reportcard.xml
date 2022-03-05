@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Reportcard>
+    <reportcard>
+        <reportcartid></reportcartid>
+        <studentid></studentid>
+        <teacherid></teacherid>
+        <studentname></studentname>
+        <gradelevel></gradelevel>
+        <subject></subject>
+        <midterm></midterm>
+        <finalexam></finalexam>
+        <finalgrade></finalgrade>
+    </reportcard>
+</Reportcard>

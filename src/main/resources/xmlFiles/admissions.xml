@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Admissions>
+<admisssions>
+    <admissionsid></admissionsid>
+    <studentid></studentid>
+    <applicationnumber></applicationnumber>
+    <applicantname></applicantname>
+    <incomingyear></incomingyear>
+    <status></status>
+    <lastdatemodified></lastdatemodified>
+    <inquiries></inquiries>
+</admisssions>
+</Admissions>

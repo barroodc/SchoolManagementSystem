@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Classroom>
+    <classroom>
+        <classroomid></classroomid>
+        <teacherid></teacherid>
+        <gradelevelid></gradelevelid>
+        <teacherscheduleid></teacherscheduleid>
+        <section></section>
+        <remarks></remarks>
+    </classroom>
+</Classroom>

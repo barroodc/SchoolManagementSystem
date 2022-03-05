@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Transcripts>
+    <transcripts>
+        <transcriptsid></transcriptsid>
+        <studentid></studentid>
+        <classname></classname>
+        <yearorsemester></yearorsemester>
+        <finalgrade></finalgrade>
+        <credits></credits>
+    </transcripts>
+</Transcripts>

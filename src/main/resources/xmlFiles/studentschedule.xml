@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Studentschedule>
+    <studentschedule>
+        <studentscheduleid></studentscheduleid>
+        <studentid></studentid>
+        <dayofweek></dayofweek>
+        <time></time>
+        <location></location>
+        <lunchbreak></lunchbreak>
+        <classroom></classroom>
+        <coursename></coursename>
+        <totalnumberofcredits></totalnumberofcredits>
+    </studentschedule>
+</Studentschedule>

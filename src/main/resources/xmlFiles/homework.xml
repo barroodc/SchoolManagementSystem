@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Homework>
+    <homework>
+        <homeworkid></homeworkid>
+        <studentid></studentid>
+        <yearorsemester></yearorsemester>
+        <subject></subject>
+        <assigneddate></assigneddate>
+        <duedate></duedate>
+        <mark></mark>
+        <grade></grade>
+        <teachername></teachername>
+        <description></description>
+    </homework>
+</Homework>

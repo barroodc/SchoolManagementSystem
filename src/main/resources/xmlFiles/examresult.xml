@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Examresult>
+    <examresult>
+        <examresultid></examresultid>
+        <examid></examid>
+        <courseid></courseid>
+        <studentid></studentid>
+        <mark></mark>
+        <grade></grade>
+    </examresult>
+</Examresult>

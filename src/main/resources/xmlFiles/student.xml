@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Student>
+    <student>
+        <studentid></studentid>
+        <parentid></parentid>
+        <email></email>
+        <password></password>
+        <firstname></firstname>
+        <lastname></lastname>
+        <dob></dob>
+        <homephone></homephone>
+        <mobile></mobile>
+        <firstdayoncampus></firstdayoncampus>
+        <gradelevel></gradelevel>
+        <gpa></gpa>
+        <satscore></satscore>
+        <actscore></actscore>
+        <lastlogindate></lastlogindate>
+        <lastloginip></lastloginip>
+    </student>
+</Student>
