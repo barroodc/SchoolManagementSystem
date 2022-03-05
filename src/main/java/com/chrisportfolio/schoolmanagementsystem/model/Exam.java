@@ -1,5 +1,13 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "Exam")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"examID", "examTypeID", "subjects", "marks", "grades", "term", "className"})
 public class Exam {
 
     private Long examID;

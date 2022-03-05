@@ -1,5 +1,14 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "Transcripts")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"transcriptsID", "studentID", "className", "yearOrSemester", "finalGrade", "credits"})
+
 public class Transcripts {
 
     private Long transcriptsID;

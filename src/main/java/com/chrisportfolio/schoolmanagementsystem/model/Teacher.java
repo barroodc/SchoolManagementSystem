@@ -1,7 +1,15 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.sql.Date;
 
+@XmlRootElement(name = "Teacher")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"teacherID", "email", "password", "firstName", "lastName", "dob", "subject", "homePhone",
+        "mobile", "tenured", "lastLoginDate", "lastLoginIP"})
 public class Teacher {
 
     private Long teacherID;

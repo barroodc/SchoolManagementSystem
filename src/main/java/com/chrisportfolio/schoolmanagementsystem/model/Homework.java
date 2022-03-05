@@ -1,7 +1,15 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.sql.Date;
 
+@XmlRootElement(name = "Homework")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"homeworkID", "studentID", "subject", "assignedDate", "dueDate", "mark", "grade", "teacherName",
+"description"})
 public class Homework {
 
     private Long homeworkID;

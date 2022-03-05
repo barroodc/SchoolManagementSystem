@@ -15,13 +15,13 @@ public class ParentDao extends AbstractMySQLDao<Parent> implements IParentDao {
     private static final Logger LOGGER = LogManager.getLogger(ParentDao.class);
 
     private static final String INSERT = "INSERT INTO parent (parent_id, email, password, first_name, " +
-            "last_name, dob, home_phone, mobile, last_login, last_login_ip) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            "last_name, dob, home_phone, mobile, last_login_date, last_login_ip) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     private static final String GET_ONE = "SELECT parent_id, email, password, first_name," +
-            "last_name, dob, home_page, mobile, last_login, last_login_ip FROM parent WHERE parent_id = ?";
+            "last_name, dob, home_page, mobile, last_login_date, last_login_ip FROM parent WHERE parent_id = ?";
 
     private static final String UPDATE = "UPDATE parent SET email = ?, password = ?, first_name = ?, " +
-            "last_name = ?, dob = ?, home_phone = ?, mobile = ?, last_login = ?, last_login_ip = ? FROM parent WHERE parent_id = ?";
+            "last_name = ?, dob = ?, home_phone = ?, mobile = ?, last_login_date = ?, last_login_ip = ? FROM parent WHERE parent_id = ?";
 
     private static final String DELETE = "DELETE FROM parent WHERE parent_id = ?";
 
@@ -40,7 +40,7 @@ public class ParentDao extends AbstractMySQLDao<Parent> implements IParentDao {
                 parent.setDob(rs.getDate("dob"));
                 parent.setHomePhone(rs.getString("home_phone"));
                 parent.setMobile(rs.getString("mobile"));
-                parent.setLastLogin(rs.getDate("last_login"));
+                parent.setLastLoginDate(rs.getDate("last_login_date"));
                 parent.setLastLoginIP(rs.getString("last_login_ip"));
             }
         } catch (SQLException e) {
@@ -65,7 +65,7 @@ public class ParentDao extends AbstractMySQLDao<Parent> implements IParentDao {
             statement.setDate(5, dto.getDob());
             statement.setString(6, dto.getHomePhone());
             statement.setString(7, dto.getMobile());
-            statement.setDate(8, dto.getLastLogin());
+            statement.setDate(8, dto.getLastLoginDate());
             statement.setString(9, dto.getLastLoginIP());
         } catch (SQLException e) {
             LOGGER.error(e);
@@ -84,7 +84,7 @@ public class ParentDao extends AbstractMySQLDao<Parent> implements IParentDao {
             statement.setDate(6, dto.getDob());
             statement.setString(7, dto.getHomePhone());
             statement.setString(8, dto.getMobile());
-            statement.setDate(9, dto.getLastLogin());
+            statement.setDate(9, dto.getLastLoginDate());
             statement.setString(10, dto.getLastLoginIP());
         } catch (SQLException e) {
             LOGGER.error(e);

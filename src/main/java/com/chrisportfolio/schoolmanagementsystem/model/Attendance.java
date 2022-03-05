@@ -1,5 +1,15 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "Attendance")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"attendanceID", "studentID", "perfectAttendance", "acceptableAttendance",
+        "unacceptableAttendance", "excusedAbsences", "unexcusedAbsences", "tardy", "remark"})
+
 public class Attendance {
 
     private Long attendanceID;
@@ -7,8 +17,8 @@ public class Attendance {
     private short perfectAttendance;
     private short acceptableAttendance;
     private short unacceptableAttendance;
-    private int excused_absences;
-    private int unexcused_absences;
+    private int excusedAbsences;
+    private int unexcusedAbsences;
     private int tardy;
     private String remark;
 
@@ -52,20 +62,20 @@ public class Attendance {
         this.unacceptableAttendance = unacceptableAttendance;
     }
 
-    public int getExcused_absences() {
-        return excused_absences;
+    public int getExcusedAbsences() {
+        return excusedAbsences;
     }
 
-    public void setExcused_absences(int excused_absences) {
-        this.excused_absences = excused_absences;
+    public void setExcusedAbsences(int excusedAbsences) {
+        this.excusedAbsences = excusedAbsences;
     }
 
-    public int getUnexcused_absences() {
-        return unexcused_absences;
+    public int getUnexcusedAbsences() {
+        return unexcusedAbsences;
     }
 
-    public void setUnexcused_absences(int unexcused_absences) {
-        this.unexcused_absences = unexcused_absences;
+    public void setUnexcusedAbsences(int unexcusedAbsences) {
+        this.unexcusedAbsences = unexcusedAbsences;
     }
 
     public int getTardy() {

@@ -1,5 +1,14 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
+import com.sun.xml.txw2.annotation.XmlElement;
+
+import javax.xml.bind.annotation.*;
+
+@XmlRootElement(name = "ReportCard")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"reportCardID", "studentID", "teacherID", "studentName", "gradeLevel", "subject", "midterm",
+"finalExam", "finalGrade"})
+
 public class ReportCard {
 
     private Long reportCardID;

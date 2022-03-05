@@ -1,7 +1,13 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
+import jakarta.xml.bind.annotation.XmlElement;
+
+import javax.xml.bind.annotation.*;
 import java.sql.Date;
 
+@XmlRootElement(name = "Admissions")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"admissionsID", "studentID", "applicationNumber", "applicantName", "incomingYear", "status", "lastModified", "inquiries"})
 public class Admissions {
 
     private Long admissionsID;

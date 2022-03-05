@@ -1,7 +1,15 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.sql.Date;
 
+@XmlRootElement(name = "Parent")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"parentID", "email", "password", "firstName", "lastName", "dob", "homePhone", "mobile",
+"lastLoginDate", "lastLoginIP"})
 public class Parent {
 
     private Long parentID;
@@ -12,7 +20,7 @@ public class Parent {
     private Date dob;
     private String homePhone;
     private String mobile;
-    private Date lastLogin;
+    private Date lastLoginDate;
     private String lastLoginIP;
 
     public Long getParentID() {
@@ -79,12 +87,12 @@ public class Parent {
         this.mobile = mobile;
     }
 
-    public Date getLastLogin() {
-        return lastLogin;
+    public Date getLastLoginDate() {
+        return lastLoginDate;
     }
 
-    public void setLastLogin(Date lastLogin) {
-        this.lastLogin = lastLogin;
+    public void setLastLoginDate(Date lastLoginDate) {
+        this.lastLoginDate = lastLoginDate;
     }
 
     public String getLastLoginIP() {

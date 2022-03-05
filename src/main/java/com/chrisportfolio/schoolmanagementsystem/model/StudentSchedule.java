@@ -1,6 +1,15 @@
 package com.chrisportfolio.schoolmanagementsystem.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.sql.Time;
+
+@XmlRootElement(name = "StudentSchedule")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"studentScheduleID", "studentID", "dayOfWeek", "time", "location", "lunchBreak", "classRoom",
+"courseName", "totalNumberOfCredits"})
 
 public class StudentSchedule {
 
