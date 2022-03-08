@@ -2,21 +2,21 @@
 
 <Student>
     <student>
-        <studentid></studentid>
-        <parentid></parentid>
-        <email></email>
-        <password></password>
-        <firstname></firstname>
-        <lastname></lastname>
-        <dob></dob>
-        <homephone></homephone>
-        <mobile></mobile>
-        <firstdayoncampus></firstdayoncampus>
-        <gradelevel></gradelevel>
-        <gpa></gpa>
-        <satscore></satscore>
-        <actscore></actscore>
-        <lastlogindate></lastlogindate>
-        <lastloginip></lastloginip>
+        <studentid>578329</studentid>
+        <parentid>34950593</parentid>
+        <email>charliebrown@gmail.com</email>
+        <password>goodgrief72</password>
+        <firstname>Charlie</firstname>
+        <lastname>Brown</lastname>
+        <dob>2008-10-10</dob>
+        <homephone>2025550186</homephone>
+        <mobile>2025559456</mobile>
+        <firstdayoncampus>2021-09-12</firstdayoncampus>
+        <gradelevel>9</gradelevel>
+        <gpa>4.0</gpa>
+        <satscore>N/A</satscore>
+        <actscore>N/A</actscore>
+        <lastlogindate>2022-03-01</lastlogindate>
+        <lastloginip>153.132.246.12</lastloginip>
     </student>
 </Student>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
+<!--Need to revisit and rename -->
 <Studentschedule>
     <studentschedule>
-        <studentscheduleid></studentscheduleid>
-        <studentid></studentid>
+        <studentscheduleid>19839474</studentscheduleid>
+        <studentid>578329</studentid>
         <dayofweek></dayofweek>
         <time></time>
         <location></location>

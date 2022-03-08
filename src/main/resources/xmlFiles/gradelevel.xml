@@ -2,9 +2,8 @@
 
 <Gradelevel>
     <gradelevel>
-        <gradelevelid>
-            <name></name>
-            <description></description>
-        </gradelevelid>
+            <gradelevelid>9</gradelevelid>
+            <name>Freshman</name>
+            <description>N/A</description>
     </gradelevel>
 </Gradelevel>

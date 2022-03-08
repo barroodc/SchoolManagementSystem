@@ -34,11 +34,11 @@ public class AttendanceDao extends AbstractMySQLDao<Attendance> implements IAtte
             while (rs.next()) {
                 attendance.setAttendanceID(rs.getLong("attendance_id"));
                 attendance.setStudentID(rs.getLong("student_id"));
-                attendance.setPerfectAttendance(rs.getShort("perfect_attendance"));
-                attendance.setAcceptableAttendance(rs.getShort("acceptable_attendance"));
-                attendance.setUnacceptableAttendance(rs.getShort("unacceptable_attendance"));
-                attendance.setExcused_absences(rs.getInt("excused_absences"));
-                attendance.setUnexcused_absences(rs.getInt("unexcused_absences"));
+                attendance.setPerfectAttendance(rs.getByte("perfect_attendance"));
+                attendance.setAcceptableAttendance(rs.getByte("acceptable_attendance"));
+                attendance.setUnacceptableAttendance(rs.getByte("unacceptable_attendance"));
+                attendance.setExcusedAbsences(rs.getInt("excused_absences"));
+                attendance.setUnexcusedAbsences(rs.getInt("unexcused_absences"));
                 attendance.setTardy(rs.getInt("tardy"));
                 attendance.setRemark(rs.getString("remark"));
             }
@@ -61,8 +61,8 @@ public class AttendanceDao extends AbstractMySQLDao<Attendance> implements IAtte
             statement.setShort(2, dto.getPerfectAttendance());
             statement.setShort(3, dto.getAcceptableAttendance());
             statement.setShort(4, dto.getUnacceptableAttendance());
-            statement.setInt(5, dto.getExcused_absences());
-            statement.setInt(6, dto.getUnexcused_absences());
+            statement.setInt(5, dto.getExcusedAbsences());
+            statement.setInt(6, dto.getUnexcusedAbsences());
             statement.setInt(7, dto.getTardy());
             statement.setString(8, dto.getRemark());
         } catch (SQLException e) {
@@ -79,8 +79,8 @@ public class AttendanceDao extends AbstractMySQLDao<Attendance> implements IAtte
             statement.setShort(3, dto.getPerfectAttendance());
             statement.setShort(4, dto.getAcceptableAttendance());
             statement.setShort(5, dto.getUnacceptableAttendance());
-            statement.setInt(6, dto.getExcused_absences());
-            statement.setInt(7, dto.getUnexcused_absences());
+            statement.setInt(6, dto.getExcusedAbsences());
+            statement.setInt(7, dto.getUnexcusedAbsences());
             statement.setInt(8, dto.getTardy());
             statement.setString(9, dto.getRemark());
         } catch (SQLException e) {

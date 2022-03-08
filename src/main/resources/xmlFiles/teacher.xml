@@ -2,17 +2,17 @@
 
 <Teacher>
     <teacher>
-        <teacherid></teacherid>
-        <email></email>
-        <password></password>
-        <firstname></firstname>
-        <lastname></lastname>
-        <dob></dob>
-        <subject></subject>
-        <homephone></homephone>
-        <mobile></mobile>
-        <tenured></tenured>
-        <lastlogindate></lastlogindate>
-        <lastloginip></lastloginip>
+        <teacherid>19783049</teacherid>
+        <email>johnsmith@sbschools.org</email>
+        <password>recess4545</password>
+        <firstname>John</firstname>
+        <lastname>Smith</lastname>
+        <dob>1987-05-09</dob>
+        <subject>Algebra 1</subject>
+        <homephone>2026669878</homephone>
+        <mobile>2026668765</mobile>
+        <tenured>1</tenured>
+        <lastlogindate>2022-03-06</lastlogindate>
+        <lastloginip>229.161.100.121</lastloginip>
     </teacher>
 </Teacher>

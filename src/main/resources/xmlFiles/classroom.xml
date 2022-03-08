@@ -2,11 +2,11 @@
 
 <Classroom>
     <classroom>
-        <classroomid></classroomid>
-        <teacherid></teacherid>
-        <gradelevelid></gradelevelid>
-        <teacherscheduleid></teacherscheduleid>
-        <section></section>
-        <remarks></remarks>
+        <classroomid>456</classroomid>
+        <teacherid>19783049</teacherid>
+        <gradelevelid>9</gradelevelid>
+        <teacherscheduleid>24958573</teacherscheduleid>
+        <section>1A</section>
+        <remarks>N/A</remarks>
     </classroom>
 </Classroom>

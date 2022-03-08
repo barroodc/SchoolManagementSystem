@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
+<!-- Need to revise -->
 <Reportcard>
     <reportcard>
-        <reportcartid></reportcartid>
-        <studentid></studentid>
-        <teacherid></teacherid>
-        <studentname></studentname>
-        <gradelevel></gradelevel>
-        <subject></subject>
+        <reportcartid>97283920</reportcartid>
+        <studentid>578329</studentid>
+        <teacherid>6289493</teacherid>
+        <studentname>Charlie Brown</studentname>
+        <gradelevel>9</gradelevel>
+        <subject>Algebra 1</subject>
         <midterm></midterm>
         <finalexam></finalexam>
         <finalgrade></finalgrade>

@@ -20,11 +20,11 @@ public class Attendance {
     @JsonProperty("studentID")
     private Long studentID;
     @JsonProperty("perfectAttendance")
-    private short perfectAttendance;
+    private byte perfectAttendance;
     @JsonProperty("acceptableAttendance")
-    private short acceptableAttendance;
+    private byte acceptableAttendance;
     @JsonProperty("unacceptableAttendance")
-    private short unacceptableAttendance;
+    private byte unacceptableAttendance;
     @JsonProperty("excusedAbsences")
     private int excusedAbsences;
     @JsonProperty("unexcusedAbsences")
@@ -58,34 +58,34 @@ public class Attendance {
 
     @JsonAnyGetter
     @XmlElement(name = "perfectAttendance")
-    public short getPerfectAttendance() {
+    public byte getPerfectAttendance() {
         return perfectAttendance;
     }
 
     @JsonAnySetter
-    public void setPerfectAttendance(short perfectAttendance) {
+    public void setPerfectAttendance(byte perfectAttendance) {
         this.perfectAttendance = perfectAttendance;
     }
 
     @JsonAnyGetter
     @XmlElement(name = "acceptableAttendance")
-    public short getAcceptableAttendance() {
+    public byte getAcceptableAttendance() {
         return acceptableAttendance;
     }
 
     @JsonAnySetter
-    public void setAcceptableAttendance(short acceptableAttendance) {
+    public void setAcceptableAttendance(byte acceptableAttendance) {
         this.acceptableAttendance = acceptableAttendance;
     }
 
     @JsonAnyGetter
     @XmlElement(name = "unacceptableAttendance")
-    public short getUnacceptableAttendance() {
+    public byte getUnacceptableAttendance() {
         return unacceptableAttendance;
     }
 
     @JsonAnySetter
-    public void setUnacceptableAttendance(short unacceptableAttendance) {
+    public void setUnacceptableAttendance(byte unacceptableAttendance) {
         this.unacceptableAttendance = unacceptableAttendance;
     }
 

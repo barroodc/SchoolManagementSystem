@@ -2,13 +2,13 @@
 
 <Admissions>
 <admisssions>
-    <admissionsid></admissionsid>
-    <studentid></studentid>
-    <applicationnumber></applicationnumber>
-    <applicantname></applicantname>
-    <incomingyear></incomingyear>
-    <status></status>
-    <lastdatemodified></lastdatemodified>
-    <inquiries></inquiries>
+    <admissionsid>123456</admissionsid>
+    <studentid>578329</studentid>
+    <applicationnumber>1</applicationnumber>
+    <applicantname>Charlie Brown</applicantname>
+    <incomingyear>Freshman</incomingyear>
+    <status>Accepted</status>
+    <lastdatemodified>2021-07-15</lastdatemodified>
+    <inquiries>N/A</inquiries>
 </admisssions>
 </Admissions>

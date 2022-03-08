@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
+<!--Need to revisit and rename -->
 <Homework>
     <homework>
-        <homeworkid></homeworkid>
-        <studentid></studentid>
-        <yearorsemester></yearorsemester>
-        <subject></subject>
-        <assigneddate></assigneddate>
-        <duedate></duedate>
-        <mark></mark>
+        <homeworkid>49872</homeworkid>
+        <studentid>578329</studentid>
+        <yearorsemester>Freshman</yearorsemester>
+        <subject>Algebra 1</subject>
+        <assigneddate>2021-9-15</assigneddate>
+        <duedate>2021-9-25</duedate>
+        <mark>50</mark>
         <grade></grade>
         <teachername></teachername>
         <description></description>

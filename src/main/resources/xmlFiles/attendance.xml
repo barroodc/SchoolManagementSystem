@@ -2,14 +2,14 @@
 
 <Attendance>
     <attendance>
-        <attendanceid></attendanceid>
-        <studentid></studentid>
-        <perfectattendance></perfectattendance>
-        <acceptableattendance></acceptableattendance>
-        <unacceptableattendance></unacceptableattendance>
-        <excusedabsenses></excusedabsenses>
-        <unexcusedabsenses></unexcusedabsenses>
-        <tardy></tardy>
-        <remark></remark>
+        <attendanceid>1011213</attendanceid>
+        <studentid>578329</studentid>
+        <perfectattendance>1</perfectattendance>
+        <acceptableattendance>1</acceptableattendance>
+        <unacceptableattendance>1</unacceptableattendance>
+        <excusedabsenses>0</excusedabsenses>
+        <unexcusedabsenses>0</unexcusedabsenses>
+        <tardy>0</tardy>
+        <remark>N/A</remark>
     </attendance>
 </Attendance>

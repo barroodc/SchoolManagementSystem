@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
+<!--Need to revisit and rename -->
 <Teacherschedule>
     <teacherschedule>
-        <teacherscheduleid></teacherscheduleid>
-        <teacherid></teacherid>
+        <teacherscheduleid>24958573</teacherscheduleid>
+        <teacherid>19783049</teacherid>
         <dayofweek></dayofweek>
         <time></time>
         <lunchbreak></lunchbreak>
-        <coursetaught></coursetaught>
+        <coursetaught>Algebra 1</coursetaught>
     </teacherschedule>
 </Teacherschedule>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
+<!--Need to revisit and rename -->
 <Exam>
     <exam>
-        <examid></examid>
-        <examtypeid></examtypeid>
-        <subjects></subjects>
+        <examid>57648329</examid>
+        <examtypeid>67253133</examtypeid>
+        <subjects>Slope Intercept Form, Quadratic Equation, Imaginary Numbers</subjects>
         <marks></marks>
         <grades></grades>
-        <term></term>
-        <class></class>
+        <term>1</term>
+        <class>Algebra 1</class>
     </exam>
 </Exam>

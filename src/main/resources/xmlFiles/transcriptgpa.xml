@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
+<!--Need to revisit and rename. -->
 <Transcriptgpa>
     <transcriptgpa>
-        <transcriptgpaid></transcriptgpaid>
-        <transcriptsid></transcriptsid>
+        <transcriptgpaid>2943857</transcriptgpaid>
+        <transcriptsid>32423535</transcriptsid>
         <totalcreditsearned></totalcreditsearned>
         <gpa></gpa>
     </transcriptgpa>
