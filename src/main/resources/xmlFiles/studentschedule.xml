@@ -4,12 +4,12 @@
     <studentschedule>
         <studentscheduleid>19839474</studentscheduleid>
         <studentid>578329</studentid>
-        <dayofweek></dayofweek>
-        <time></time>
-        <location></location>
-        <lunchbreak></lunchbreak>
-        <classroom></classroom>
-        <coursename></coursename>
-        <totalnumberofcredits></totalnumberofcredits>
+        <dayofweek>Wednesday</dayofweek>
+        <time>2022-10-10T17:00:00.000Z</time>
+        <location>Hallway G</location>
+        <lunchbreak>Cafeteria B</lunchbreak>
+        <classroom>Classroom G5</classroom>
+        <coursename>Advanced Geometry</coursename>
+        <totalnumberofcredits>3.0</totalnumberofcredits>
     </studentschedule>
 </Studentschedule>

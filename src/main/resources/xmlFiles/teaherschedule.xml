@@ -4,9 +4,9 @@
     <teacherschedule>
         <teacherscheduleid>24958573</teacherscheduleid>
         <teacherid>19783049</teacherid>
-        <dayofweek></dayofweek>
-        <time></time>
-        <lunchbreak></lunchbreak>
+        <dayofweek>Friday</dayofweek>
+        <time>2022-12-10T17:00:00.000Z</time>
+        <lunchbreak>Break Room</lunchbreak>
         <coursetaught>Algebra 1</coursetaught>
     </teacherschedule>
 </Teacherschedule>

@@ -8,8 +8,8 @@
         <studentname>Charlie Brown</studentname>
         <gradelevel>9</gradelevel>
         <subject>Algebra 1</subject>
-        <midterm></midterm>
-        <finalexam></finalexam>
-        <finalgrade></finalgrade>
+        <midterm>A+</midterm>
+        <finalexam>A+</finalexam>
+        <finalgrade>A+</finalgrade>
     </reportcard>
 </Reportcard>

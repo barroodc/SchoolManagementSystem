@@ -9,8 +9,8 @@
         <assigneddate>2021-9-15</assigneddate>
         <duedate>2021-9-25</duedate>
         <mark>50</mark>
-        <grade></grade>
-        <teachername></teachername>
-        <description></description>
+        <grade>A+</grade>
+        <teachername>Mr.Integral</teachername>
+        <description>Find the slope intercept of the following equations</description>
     </homework>
 </Homework>

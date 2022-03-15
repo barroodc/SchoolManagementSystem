@@ -5,11 +5,11 @@ import com.fasterxml.jackson.annotation.*;
 import javax.xml.bind.annotation.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"examID", "examTypeID", "subjects", "marks", "grades", "term", "className"})
+@JsonPropertyOrder({"examID", "examTypeID", "subjects", "term", "className"})
 
 @XmlRootElement(name = "Exam")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"examID", "examTypeID", "subjects", "marks", "grades", "term", "className"})
+@XmlType(propOrder = {"examID", "examTypeID", "subjects", "term", "className"})
 public class Exam {
 
     @JsonProperty("examID")
@@ -18,10 +18,6 @@ public class Exam {
     private Long examTypeID;
     @JsonProperty("subjects")
     private String subjects;
-    @JsonProperty("marks")
-    private double marks;
-    @JsonProperty("grades")
-    private String grades;
     @JsonProperty("term")
     private String term;
     @JsonProperty("classname")
@@ -58,28 +54,6 @@ public class Exam {
     @JsonAnySetter
     public void setSubjects(String subjects) {
         this.subjects = subjects;
-    }
-
-    @JsonAnyGetter
-    @XmlElement(name = "marks")
-    public double getMarks() {
-        return marks;
-    }
-
-    @JsonAnySetter
-    public void setMarks(double marks) {
-        this.marks = marks;
-    }
-
-    @JsonAnyGetter
-    @XmlElement(name = "grades")
-    public String getGrades() {
-        return grades;
-    }
-
-    @JsonAnySetter
-    public void setGrades(String grades) {
-        this.grades = grades;
     }
 
     @JsonAnyGetter

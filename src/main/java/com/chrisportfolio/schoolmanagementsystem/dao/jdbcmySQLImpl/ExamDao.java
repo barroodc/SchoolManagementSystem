@@ -15,13 +15,13 @@ public class ExamDao extends AbstractMySQLDao<Exam> implements IExamDao {
     private static final Logger LOGGER = LogManager.getLogger(ExamDao.class);
 
     private static final String INSERT = "INSERT INTO exam (exam_id, exam_type_id, subjects, " +
-            "marks, grades, term, class_name) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            "term, class_name) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
     private static final String GET_ONE = "SELECT exam_id, exam_type_id, subjects," +
-            "marks, grades, term, class_name FROM exam WHERE exam_id = ?";
+            "term, class_name FROM exam WHERE exam_id = ?";
 
-    private static final String UPDATE = "UPDATE exam SET exam_type_id = ?, subjects = ?, marks = ?, " +
-            "grades = ?, term = ? FROM exam WHERE exam_id = ?";
+    private static final String UPDATE = "UPDATE exam SET exam_type_id = ?, subjects = ?, " +
+            "term = ? FROM exam WHERE exam_id = ?";
 
     private static final String DELETE = "DELETE FROM exam WHERE exam_id = ?";
 
@@ -35,8 +35,6 @@ public class ExamDao extends AbstractMySQLDao<Exam> implements IExamDao {
                 exam.setExamID(rs.getLong("exam_id"));
                 exam.setExamTypeID(rs.getLong("exam_type_id"));
                 exam.setSubjects(rs.getString("subjects"));
-                exam.setMarks(rs.getDouble("marks"));
-                exam.setGrades(rs.getString("grades"));
                 exam.setTerm(rs.getString("term"));
                 exam.setClassName(rs.getString("class_name"));
             }
@@ -57,10 +55,8 @@ public class ExamDao extends AbstractMySQLDao<Exam> implements IExamDao {
         try (PreparedStatement statement = this.connection.prepareStatement(UPDATE)) {
             statement.setLong(1, dto.getExamTypeID());
             statement.setString(2, dto.getSubjects());
-            statement.setDouble(3, dto.getMarks());
-            statement.setString(4, dto.getGrades());
-            statement.setString(5, dto.getTerm());
-            statement.setString(6, dto.getClassName());
+            statement.setString(3, dto.getTerm());
+            statement.setString(4, dto.getClassName());
         } catch (SQLException e) {
             LOGGER.error(e);
         }
@@ -73,10 +69,8 @@ public class ExamDao extends AbstractMySQLDao<Exam> implements IExamDao {
             statement.setLong(1, dto.getExamID());
             statement.setLong(2, dto.getExamTypeID());
             statement.setString(3, dto.getSubjects());
-            statement.setDouble(4, dto.getMarks());
-            statement.setString(5, dto.getGrades());
-            statement.setString(6, dto.getTerm());
-            statement.setString(7, dto.getClassName());
+            statement.setString(4, dto.getTerm());
+            statement.setString(5, dto.getClassName());
         } catch (SQLException e) {
             LOGGER.error(e);
         }
