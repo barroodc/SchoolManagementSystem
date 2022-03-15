@@ -53,4 +53,13 @@ public class ExamType {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "ExamType{" +
+                "examTypeID=" + examTypeID +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

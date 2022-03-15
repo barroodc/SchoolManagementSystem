@@ -65,4 +65,14 @@ public class TranscriptGPA {
     public void setGPA(double GPA) {
         this.GPA = GPA;
     }
+
+    @Override
+    public String toString() {
+        return "TranscriptGPA{" +
+                "transcriptGPAID=" + transcriptGPAID +
+                ", transcriptsID=" + transcriptsID +
+                ", totalCreditsEarned=" + totalCreditsEarned +
+                ", GPA=" + GPA +
+                '}';
+    }
 }

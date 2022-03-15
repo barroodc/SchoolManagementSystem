@@ -77,4 +77,15 @@ public class Exam {
     public void setClassName(String className) {
         this.className = className;
     }
+
+    @Override
+    public String toString() {
+        return "Exam{" +
+                "examID=" + examID +
+                ", examTypeID=" + examTypeID +
+                ", subjects='" + subjects + '\'' +
+                ", term='" + term + '\'' +
+                ", className='" + className + '\'' +
+                '}';
+    }
 }

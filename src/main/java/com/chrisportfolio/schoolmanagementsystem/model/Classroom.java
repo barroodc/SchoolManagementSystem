@@ -91,4 +91,16 @@ public class Classroom {
     public void setRemarks(String remarks) {
         this.remarks = remarks;
     }
+
+    @Override
+    public String toString() {
+        return "Classroom{" +
+                "classroomID=" + classroomID +
+                ", teacherID=" + teacherID +
+                ", gradeLevelID=" + gradeLevelID +
+                ", teacherScheduleID=" + teacherScheduleID +
+                ", section='" + section + '\'' +
+                ", remarks='" + remarks + '\'' +
+                '}';
+    }
 }

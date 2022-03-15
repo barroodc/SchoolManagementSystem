@@ -171,4 +171,22 @@ public class Teacher {
     public void setLastLoginIP(String lastLoginIP) {
         this.lastLoginIP = lastLoginIP;
     }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "teacherID=" + teacherID +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dob=" + dob +
+                ", subject='" + subject + '\'' +
+                ", homePhone='" + homePhone + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", tenured=" + tenured +
+                ", lastLoginDate=" + lastLoginDate +
+                ", lastLoginIP='" + lastLoginIP + '\'' +
+                '}';
+    }
 }

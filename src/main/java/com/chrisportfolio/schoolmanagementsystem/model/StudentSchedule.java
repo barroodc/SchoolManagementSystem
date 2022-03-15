@@ -133,4 +133,19 @@ public class StudentSchedule {
     public void setTotalNumberOfCredits(Double totalNumberOfCredits) {
         this.totalNumberOfCredits = totalNumberOfCredits;
     }
+
+    @Override
+    public String toString() {
+        return "StudentSchedule{" +
+                "studentScheduleID=" + studentScheduleID +
+                ", studentID=" + studentID +
+                ", dayOfWeek='" + dayOfWeek + '\'' +
+                ", time=" + time +
+                ", location='" + location + '\'' +
+                ", lunchBreak='" + lunchBreak + '\'' +
+                ", classRoom='" + classRoom + '\'' +
+                ", courseName='" + courseName + '\'' +
+                ", totalNumberOfCredits=" + totalNumberOfCredits +
+                '}';
+    }
 }

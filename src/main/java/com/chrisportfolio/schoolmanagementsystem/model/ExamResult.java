@@ -91,4 +91,16 @@ public class ExamResult {
     public void setGrade(String grade) {
         this.grade = grade;
     }
+
+    @Override
+    public String toString() {
+        return "ExamResult{" +
+                "examResultID=" + examResultID +
+                ", examID=" + examID +
+                ", courseID=" + courseID +
+                ", studentID=" + studentID +
+                ", mark=" + mark +
+                ", grade='" + grade + '\'' +
+                '}';
+    }
 }

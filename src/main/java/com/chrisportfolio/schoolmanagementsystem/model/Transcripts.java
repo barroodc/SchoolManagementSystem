@@ -91,4 +91,16 @@ public class Transcripts {
     public void setCredits(double credits) {
         this.credits = credits;
     }
+
+    @Override
+    public String toString() {
+        return "Transcripts{" +
+                "transcriptsID=" + transcriptsID +
+                ", studentID=" + studentID +
+                ", className='" + className + '\'' +
+                ", yearOrSemester='" + yearOrSemester + '\'' +
+                ", finalGrade='" + finalGrade + '\'' +
+                ", credits=" + credits +
+                '}';
+    }
 }

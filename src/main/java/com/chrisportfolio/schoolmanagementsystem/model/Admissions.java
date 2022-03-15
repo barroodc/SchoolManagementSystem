@@ -120,4 +120,18 @@ public class Admissions {
     public void setInquiries(String inquiries) {
         this.inquiries = inquiries;
     }
+
+    @Override
+    public String toString() {
+        return "Admissions{" +
+                "admissionsID=" + admissionsID +
+                ", studentID=" + studentID +
+                ", applicationNumber=" + applicationNumber +
+                ", applicantName='" + applicantName + '\'' +
+                ", incomingYear='" + incomingYear + '\'' +
+                ", status='" + status + '\'' +
+                ", lastModified=" + lastModified +
+                ", inquiries='" + inquiries + '\'' +
+                '}';
+    }
 }

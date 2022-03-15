@@ -132,4 +132,19 @@ public class ReportCard {
     public void setFinalGrade(String finalGrade) {
         this.finalGrade = finalGrade;
     }
+
+    @Override
+    public String toString() {
+        return "ReportCard{" +
+                "reportCardID=" + reportCardID +
+                ", studentID=" + studentID +
+                ", teacherID=" + teacherID +
+                ", studentName='" + studentName + '\'' +
+                ", gradeLevel='" + gradeLevel + '\'' +
+                ", subject='" + subject + '\'' +
+                ", midterm='" + midterm + '\'' +
+                ", finalExam='" + finalExam + '\'' +
+                ", finalGrade='" + finalGrade + '\'' +
+                '}';
+    }
 }

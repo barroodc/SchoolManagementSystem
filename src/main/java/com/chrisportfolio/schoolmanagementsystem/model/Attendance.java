@@ -132,4 +132,19 @@ public class Attendance {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
+    @Override
+    public String toString() {
+        return "Attendance{" +
+                "attendanceID=" + attendanceID +
+                ", studentID=" + studentID +
+                ", perfectAttendance=" + perfectAttendance +
+                ", acceptableAttendance=" + acceptableAttendance +
+                ", unacceptableAttendance=" + unacceptableAttendance +
+                ", excusedAbsences=" + excusedAbsences +
+                ", unexcusedAbsences=" + unexcusedAbsences +
+                ", tardy=" + tardy +
+                ", remark='" + remark + '\'' +
+                '}';
+    }
 }

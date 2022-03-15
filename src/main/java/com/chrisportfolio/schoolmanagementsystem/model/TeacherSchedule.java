@@ -92,4 +92,16 @@ public class TeacherSchedule {
     public void setCourseTaught(String courseTaught) {
         this.courseTaught = courseTaught;
     }
+
+    @Override
+    public String toString() {
+        return "TeacherSchedule{" +
+                "teacherScheduleID=" + teacherScheduleID +
+                ", teacherID=" + teacherID +
+                ", dayOfWeek='" + dayOfWeek + '\'' +
+                ", time=" + time +
+                ", lunchBreak='" + lunchBreak + '\'' +
+                ", courseTaught='" + courseTaught + '\'' +
+                '}';
+    }
 }

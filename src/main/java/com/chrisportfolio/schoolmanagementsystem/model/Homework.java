@@ -132,4 +132,19 @@ public class Homework {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "Homework{" +
+                "homeworkID=" + homeworkID +
+                ", studentID=" + studentID +
+                ", subject='" + subject + '\'' +
+                ", assignedDate=" + assignedDate +
+                ", dueDate=" + dueDate +
+                ", mark=" + mark +
+                ", grade='" + grade + '\'' +
+                ", teacherName='" + teacherName + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

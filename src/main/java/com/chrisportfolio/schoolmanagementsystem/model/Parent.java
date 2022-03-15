@@ -145,4 +145,20 @@ public class Parent {
     public void setLastLoginIP(String lastLoginIP) {
         this.lastLoginIP = lastLoginIP;
     }
+
+    @Override
+    public String toString() {
+        return "Parent{" +
+                "parentID=" + parentID +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dob=" + dob +
+                ", homePhone='" + homePhone + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", lastLoginDate=" + lastLoginDate +
+                ", lastLoginIP='" + lastLoginIP + '\'' +
+                '}';
+    }
 }
